@@ -1,0 +1,67 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"scutl.animation.idle": {
+			"loop": true
+		},
+		"scutl.animation.walk": {
+			"loop": true,
+			"animation_length": 0.16667,
+			"bones": {
+				"Left": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 22.5]
+						},
+						"0.0833": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.1667": {
+							"vector": [0, 0, 22.5]
+						}
+					}
+				},
+				"Right": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 22.5]
+						},
+						"0.0833": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.1667": {
+							"vector": [0, 0, 22.5]
+						}
+					}
+				},
+				"Left2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.0833": {
+							"vector": [0, 0, 22.5]
+						},
+						"0.1667": {
+							"vector": [0, 0, -22.5]
+						}
+					}
+				},
+				"Right2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.0833": {
+							"vector": [0, 0, 22.5]
+						},
+						"0.1667": {
+							"vector": [0, 0, -22.5]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

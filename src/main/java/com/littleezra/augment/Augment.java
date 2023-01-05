@@ -1,7 +1,13 @@
 package com.littleezra.augment;
 
+import com.littleezra.augment.block.ModBlocks;
+import com.littleezra.augment.entity.ModEntityTypes;
+import com.littleezra.augment.entity.client.ScutlRenderer;
+import com.littleezra.augment.entity.client.SentinelRenderer;
+import com.littleezra.augment.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -14,6 +20,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Augment.MOD_ID)
@@ -27,12 +34,16 @@ public class Augment
 
         modEventBus.addListener(this::commonSetup);
 
-        // Register DeferredRegisters
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
+
+        GeckoLib.initialize();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public void printDebug(String line){
+    public static void printDebug(String line){
         System.out.println(MOD_ID + ": [DEBUG] " + line);
     }
 
@@ -46,7 +57,8 @@ public class Augment
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntityTypes.SENTINEL.get(), SentinelRenderer::new);
+            EntityRenderers.register(ModEntityTypes.SCUTL.get(), ScutlRenderer::new);
         }
     }
 }
