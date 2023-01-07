@@ -5,6 +5,8 @@ import com.littleezra.augment.entity.ModEntityTypes;
 import com.littleezra.augment.entity.client.ScutlRenderer;
 import com.littleezra.augment.entity.client.SentinelRenderer;
 import com.littleezra.augment.item.ModItems;
+import com.littleezra.augment.item.enchantment.ModEnchantments;
+import com.littleezra.augment.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -37,6 +39,9 @@ public class Augment
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModEntityTypes.register(modEventBus);
+        ModSounds.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         GeckoLib.initialize();
 

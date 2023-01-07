@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "augment:allocite_block",
+    "augment:allocite_cluster",
+    "augment:resonator"
+  ]
+}

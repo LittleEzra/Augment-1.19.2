@@ -1,0 +1,23 @@
+{
+  "block.augment.rough_quartz_glass": "Rough Quartz Glass",
+  "block.augment.clear_quartz_glass": "Clear Quartz Glass",
+  "block.augment.whirl_tendril": "Whirl Tendril",
+  "block.augment.piglins_snout": "Piglin's Snout",
+  "block.augment.allocite_block": "Allocite Block",
+  "block.augment.allocite_cluster": "Allocite Cluster",
+
+  "item.augment.tendril_clippings": "Tendril Clippings",
+  "item.augment.sentinel_spawn_egg": "Sentinel Spawn Egg",
+  "item.augment.scutl_spawn_egg": "Scutl Spawn Egg",
+  "item.augment.allocite_crystal": "Allocite Crystal",
+
+  "entity.augment.sentinel": "Sentinel",
+  "entity.augment.scutl": "Scutl",
+
+  "death.attack.recoil_curse_damage": "%1$s was hit by the recoil",
+  "death.attack.recoil_curse_damage.player": "%1$s was hit by the recoil",
+
+  "enchantment.augment.recoil_curse": "Curse of Recoil",
+
+  "subtitles.augment.block.resonator_chime": "Resonator Resonates"
+}

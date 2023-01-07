@@ -1,0 +1,8 @@
+{
+  "block.resonator.chime": {
+    "sounds": [
+      { "name": "augment:block/chime" }
+    ],
+    "subtitle": "subtitles.augment.block.resonator_chime"
+  }
+}

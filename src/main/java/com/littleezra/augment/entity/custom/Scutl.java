@@ -154,10 +154,9 @@ public class Scutl extends Monster implements IAnimatable {
     }
 
     private void spawnLingeringCloud() {
-        Collection<MobEffectInstance> collection = this.getActiveEffects();
         if (getFlower() != null) {
             AreaEffectCloud areaeffectcloud = new AreaEffectCloud(this.level, this.getX(), this.getY(), this.getZ());
-            areaeffectcloud.setRadius(2.5f);
+            areaeffectcloud.setRadius(2.5F);
             areaeffectcloud.setRadiusOnUse(-0.5F);
             areaeffectcloud.setWaitTime(10);
             areaeffectcloud.setDuration(areaeffectcloud.getDuration() / 2);
@@ -165,13 +164,8 @@ public class Scutl extends Monster implements IAnimatable {
 
             areaeffectcloud.addEffect(new MobEffectInstance(getFlower().getSuspiciousStewEffect(), 100, 0));
 
-            for(MobEffectInstance mobeffectinstance : collection) {
-                areaeffectcloud.addEffect(new MobEffectInstance(mobeffectinstance));
-            }
-
             this.level.addFreshEntity(areaeffectcloud);
         }
-
     }
 
     @Override

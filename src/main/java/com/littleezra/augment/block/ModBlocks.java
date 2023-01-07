@@ -1,6 +1,10 @@
 package com.littleezra.augment.block;
 
 import com.littleezra.augment.Augment;
+import com.littleezra.augment.block.custom.AllociteClusterBlock;
+import com.littleezra.augment.block.custom.EndBushBlock;
+import com.littleezra.augment.block.custom.PiglinsSnoutBlock;
+import com.littleezra.augment.block.custom.ResonatorBlock;
 import com.littleezra.augment.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -30,7 +34,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLEAR_QUARTZ_GLASS = registerBlock("clear_quartz_glass",
             () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    public static final RegistryObject<Block> ALLOCITE_BLOCK = registerBlock("allocite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    public static final RegistryObject<Block> ALLOCITE_CLUSTER = registerBlock("allocite_cluster",
+            () -> new AllociteClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> WHIRL_TENDRIL = registerBlock("whirl_tendril",
+            () -> new EndBushBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> PIGLINS_SNOUT = BLOCKS.register("piglins_snout",
+            () -> new PiglinsSnoutBlock(BlockBehaviour.Properties.copy(Blocks.RED_MUSHROOM)));
+
+    public static final RegistryObject<Block> RESONATOR = registerBlock("resonator",
+            () -> new ResonatorBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3.5F).explosionResistance(3.5F)), CreativeModeTab.TAB_DECORATIONS);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
